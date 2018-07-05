@@ -96,3 +96,14 @@ function require_nvm() {
     fi
     ok
 }
+
+function require_pip() {
+  if (($#))
+  then
+    action "sudo pip install --upgrade --ignore-installed  six $@"
+    sudo pip install --upgrade --ignore-installed  six "$@"
+  else
+    printf "No package specified."
+    return 1
+  ok
+}

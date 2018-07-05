@@ -1,11 +1,27 @@
 #!/bin/sh
 
-#################################
-# Simple Program Name Shortening
-alias g=git
+# Easier navigation: .., ~ and -
+alias ..="cd .."
+alias ~="cd ~"
+alias desktop="cd ~/Desktop"
+alias cl="clear"
+alias reshell="source ~/.zshrc"
 
-#############################
+# use mvim to view diff
+alias mdiff="mvim -d"
+
+# python
+alias ipy="ipython"
+alias ipy2="ipython2"
+alias jn="jupyter notebook"
+alias pipdeps="pip install -U --force --no-deps ."
+alias f8="flake8"
+alias mkp="mkproject"
+alias wk="workon"
+
 # Utilities
+
+alias history="mvim ~/.zsh_history"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -92,3 +108,10 @@ alias spoton="sudo mdutil -a -i on"
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
 alias vtop="vtop --theme wizard"
+
+alias gfu="git fetch upstream"
+
+# If local aliases
+for file in ~/.aliases_local; do
+    source "$file"
+done
