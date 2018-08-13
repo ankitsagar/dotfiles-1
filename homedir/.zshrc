@@ -112,6 +112,15 @@ function setenv() {
   export $(cat ~/.env/$env.env | xargs)
 }
 
+function oapps() {
+  ## declare an array of apps
+  declare -a apps=("Spectacle" "CatchMouse" "MenuTube" "Postgres" "Slack")
+  for i in "${apps[@]}"
+  do
+    open -a "$i"
+  done
+}
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/say/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/say/google-cloud-sdk/path.zsh.inc'; fi
 

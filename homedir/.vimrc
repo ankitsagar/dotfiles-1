@@ -33,8 +33,6 @@ filetype plugin indent on    " required
 " configure editor basic stuff
 " -----------------------------------------------------------------------------
 set expandtab           " enter spaces when tab is pressed
-set softtabstop=4
-set autoindent          " copy indent from current line when starting a new line
 set background=dark
 set number
 set colorcolumn=79      " set line marker at 79 char
@@ -46,7 +44,7 @@ set noswapfile          "ignore swap
 syntax enable
 set tabstop=2
 set shiftwidth=2
-"http://vim.wikia.com/wiki/Remove_unwanted_spaces#
+
 "Automatically_removing_all_trailing_whitespace
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.xml :%s/\s\+$//e

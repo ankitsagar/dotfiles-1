@@ -1,6 +1,6 @@
 [user]
   name = Atul Yadav
-  email = yatul2023@gmail.com
+  email = hello@sayatul.com
 [github]
   # https://github.com/blog/180-local-github-config
   user = sayatul
@@ -160,9 +160,6 @@
 
 [diff]
   tool = vimdiff
-
-[init]
-  templatedir = ~/.dotfiles/.git_template
 
 [mergetool]
   prompt = false
