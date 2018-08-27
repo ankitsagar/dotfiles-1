@@ -105,5 +105,6 @@ function require_pip() {
   else
     printf "No package specified."
     return 1
+  fi
   ok
 }
