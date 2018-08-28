@@ -25,6 +25,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,7 +52,13 @@ autocmd BufWritePre *.xml :%s/\s\+$//e
 
 "Exit insert mode
 inoremap jj <ESC>
-nnoremap <C-Right> <C-w><Right>
+
+"Move b/w panes Cmd Opt Arrow
+nnoremap <D-A-Right> <C-W><C-L> 
+nnoremap <D-A-Left> <C-W><C-H>
+nnoremap <D-A-Down> <C-W><C-J>
+nnoremap <D-A-Up> <C-W><C-K>
+
 " -----------------------------------------------------------------------------
 " configure ALE
 " -----------------------------------------------------------------------------
@@ -95,6 +102,8 @@ let g:jedi#show_call_signatures = "1"
 "https://github.com/scrooloose/nerdcommenter
 let g:NERDSpaceDelims = 1
 let g:NERDTrimTrailingWhitespace = 1
+nnoremap ,c :call NERDComment(0,"toggle")<CR>
+vnoremap ,c :call NERDComment(0,"toggle")<CR>
 
 "https://github.com/Yggdroot/indentLine
 let g:indentLine_char = '|'
